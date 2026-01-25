@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Built-Up Heat Map – Future Chain</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #34495e;
+            color: #fff;
+        }
+
+        /* Heat Map Colors */
+        .long-buildup { background: #2ecc71; color: #fff; }
+        .short-buildup { background: #e74c3c; color: #fff; }
+        .short-covering { background: #a9dfbf; }
+        .long-unwinding { background: #922b21; color: #fff; }
+        .neutral { background: #f9e79f; }
+
+        .legend {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .legend div {
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .note {
+            background: #eef2f3;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Built-Up Heat Map – Future Chain</h1>
+
+<p>
+A <strong>Built-Up Heat Map</strong> is a visual representation of futures market data
+based on the relationship between <strong>Price movement</strong> and
+<strong>Open Interest (OI)</strong>.  
+It helps traders quickly identify <strong>bullish strength, bearish pressure,
+trend continuation, and reversals</strong>.
+</p>
+
+<hr>
+
+<h2>Future Chain Built-Up Heat Map</h2>
+
+<table>
+    <tr>
+        <th>Contract</th>
+        <th>LTP</th>
+        <th>Price Change</th>
+        <th>% Price Change</th>
+        <th>OI Change</th>
+        <th>OI %</th>
+        <th>Volume</th>
+        <th>Built-Up</th>
+        <th>Signal</th>
+    </tr>
+
+    <tr class="long-buildup">
+        <td>NIFTY FUT</td>
+        <td>22450</td>
+        <td>+160</td>
+        <td>+0.72%</td>
+        <td>+1,90,000</td>
+        <td>+6.4%</td>
+        <td>14,80,000</td>
+        <td>Long Buildup</td>
+        <td>Strong Bullish</td>
+    </tr>
+
+    <tr class="short-buildup">
+        <td>BANKNIFTY FUT</td>
+        <td>47920</td>
+        <td>-340</td>
+        <td>-0.70%</td>
+        <td>+1,05,000</td>
+        <td>+5.1%</td>
+        <td>9,60,000</td>
+        <td>Short Buildup</td>
+        <td>Bearish</td>
+    </tr>
+
+    <tr class="short-covering">
+        <td>RELIANCE FUT</td>
+        <td>2960</td>
+        <td>+58</td>
+        <td>+2.0%</td>
+        <td>-42,000</td>
+        <td>-2.3%</td>
+        <td>6,10,000</td>
+        <td>Short Covering</td>
+        <td>Bullish Reversal</td>
+    </tr>
+
+    <tr class="long-unwinding">
+        <td>TCS FUT</td>
+        <td>3845</td>
+        <td>-82</td>
+        <td>-2.1%</td>
+        <td>-60,000</td>
+        <td>-3.8%</td>
+        <td>3,40,000</td>
+        <td>Long Unwinding</td>
+        <td>Bearish Reversal</td>
+    </tr>
+
+    <tr class="neutral">
+        <td>INFY FUT</td>
+        <td>1625</td>
+        <td>+5</td>
+        <td>+0.3%</td>
+        <td>+4,000</td>
+        <td>+0.2%</td>
+        <td>2,10,000</td>
+        <td>Neutral</td>
+        <td>Sideways</td>
+    </tr>
+</table>
+
+<div class="legend">
+    <div style="background:#2ecc71;">Long Buildup</div>
+    <div style="background:#e74c3c;">Short Buildup</div>
+    <div style="background:#a9dfbf;color:#000;">Short Covering</div>
+    <div style="background:#922b21;">Long Unwinding</div>
+    <div style="background:#f9e79f;color:#000;">Neutral</div>
+</div>
+
+<hr>
+
+<h2>Explanation of Columns</h2>
+
+<table>
+    <tr>
+        <th>Column</th>
+        <th>Explanation</th>
+        <th>Trading Insight</th>
+    </tr>
+
+    <tr>
+        <td>Contract</td>
+        <td>Name of the futures contract</td>
+        <td>Identifies the trading instrument</td>
+    </tr>
+
+    <tr>
+        <td>LTP</td>
+        <td>Last Traded Price</td>
+        <td>Shows current market price</td>
+    </tr>
+
+    <tr>
+        <td>Price Change</td>
+        <td>Difference from previous close</td>
+        <td>Indicates bullish or bearish move</td>
+    </tr>
+
+    <tr>
+        <td>% Price Change</td>
+        <td>Percentage movement in price</td>
+        <td>Measures strength of price move</td>
+    </tr>
+
+    <tr>
+        <td>OI Change</td>
+        <td>Change in Open Interest</td>
+        <td>Shows position buildup or exit</td>
+    </tr>
+
+    <tr>
+        <td>OI %</td>
+        <td>Percentage change in Open Interest</td>
+        <td>Strength of participation</td>
+    </tr>
+
+    <tr>
+        <td>Volume</td>
+        <td>Total contracts traded</td>
+        <td>Confirms price & OI action</td>
+    </tr>
+
+    <tr>
+        <td>Built-Up</td>
+        <td>Derived from Price vs OI behavior</td>
+        <td>Identifies long/short activity</td>
+    </tr>
+
+    <tr>
+        <td>Signal</td>
+        <td>Final market interpretation</td>
+        <td>Helps trading decision</td>
+    </tr>
+</table>
+
+<div class="note">
+<strong>Key Logic:</strong><br>
+• Price ↑ + OI ↑ → <b>Long Buildup</b><br>
+• Price ↓ + OI ↑ → <b>Short Buildup</b><br>
+• Price ↑ + OI ↓ → <b>Short Covering</b><br>
+• Price ↓ + OI ↓ → <b>Long Unwinding</b>
+</div>
+<h3>What are filter options?</h3>
+<div class="note">
+<strong>Practical Tip:</strong><br>
+• Use <b>1–3 Days</b> for intraday & BTST setups<br>
+• Use <b>7–15 Days</b> for swing trades<br>
+• Use <b>30 Days</b> to spot positional accumulation or distribution<br>
+• Combine <b>Expiry + Symbol Reading</b> for high-confidence trades
+</div>
+
+
+</div>
+
+</body>
+</html>
