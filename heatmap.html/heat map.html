@@ -2,261 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Built-Up Heat Map – Future Chain</title>
+    <title>Future Built-Up Heatmap – Explained</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        h1, h2 {
-            color: #2c3e50;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.1);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background: #34495e;
-            color: #fff;
-        }
-
-        /* Heat Map Colors */
-        .long-buildup { background: #2ecc71; color: #fff; }
-        .short-buildup { background: #e74c3c; color: #fff; }
-        .short-covering { background: #a9dfbf; }
-        .long-unwinding { background: #922b21; color: #fff; }
-        .neutral { background: #f9e79f; }
-
-        .legend {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .legend div {
-            padding: 8px 12px;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #fff;
-        }
-
-        .note {
-            background: #eef2f3;
-            padding: 15px;
-            border-left: 5px solid #3498db;
-            margin-top: 20px;
-        }
-    </style>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
 
-<div class="container">
+<div class="container my-4">
 
-<h1>Built-Up Heat Map – Future Chain</h1>
+    <!-- Title -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h1 class="fw-bold">Future Built-Up Heatmap</h1>
+            <p class="text-muted mb-0">
+                A visual guide to understanding how futures traders build, hold,
+                or exit positions using <strong>Price</strong> and
+                <strong>Open Interest (OI)</strong>.
+            </p>
+        </div>
+    </div>
 
-<p>
-A <strong>Built-Up Heat Map</strong> is a visual representation of futures market data
-based on the relationship between <strong>Price movement</strong> and
-<strong>Open Interest (OI)</strong>.  
-It helps traders quickly identify <strong>bullish strength, bearish pressure,
-trend continuation, and reversals</strong>.
-</p>
+    <!-- Image Section -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="fw-semibold">Built-Up Heatmap Overview</h4>
+            <p class="text-muted">
+                A <strong>Built-Up Heatmap</strong> visually represents futures market behavior
+                by comparing <strong>price movement</strong> with
+                <strong>open interest change</strong>.
+                It helps identify <strong>trend strength, reversals,
+                accumulation, and distribution</strong>.
+            </p>
 
-<hr>
+            <div class="text-center">
+                <img src="C:\Users\hp\Desktop\futurechain\heatmap.html\images\htm.png"
+                     class="img-fluid rounded border"
+                     alt="Future Built-Up Heatmap">
+            </div>
+        </div>
+    </div>
 
-<h2>Future Chain Built-Up Heat Map</h2>
+    <!-- Filters -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="fw-semibold">Top Filters – Meaning</h4>
 
-<table>
-    <tr>
-        <th>Contract</th>
-        <th>LTP</th>
-        <th>Price Change</th>
-        <th>% Price Change</th>
-        <th>OI Change</th>
-        <th>OI %</th>
-        <th>Volume</th>
-        <th>Built-Up</th>
-        <th>Signal</th>
-    </tr>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <strong>Symbol Type:</strong> STOCKS – Only stock futures displayed
+                </li>
+                <li class="list-group-item">
+                    <strong>Expiry:</strong> JAN-2026 – Selected futures contract
+                </li>
+                <li class="list-group-item">
+                    <strong>Days:</strong> 7 Days – Built-up calculated for last 7 sessions
+                </li>
+                <li class="list-group-item">
+                    <strong>Symbol Reading:</strong> ALL – Shows all position types
+                </li>
+            </ul>
 
-    <tr class="long-buildup">
-        <td>NIFTY FUT</td>
-        <td>22450</td>
-        <td>+160</td>
-        <td>+0.72%</td>
-        <td>+1,90,000</td>
-        <td>+6.4%</td>
-        <td>14,80,000</td>
-        <td>Long Buildup</td>
-        <td>Strong Bullish</td>
-    </tr>
+            <p class="mt-3 text-muted">
+                Fewer days highlight <strong>short-term momentum</strong>,
+                while more days reveal <strong>institutional accumulation or exit</strong>.
+            </p>
+        </div>
+    </div>
 
-    <tr class="short-buildup">
-        <td>BANKNIFTY FUT</td>
-        <td>47920</td>
-        <td>-340</td>
-        <td>-0.70%</td>
-        <td>+1,05,000</td>
-        <td>+5.1%</td>
-        <td>9,60,000</td>
-        <td>Short Buildup</td>
-        <td>Bearish</td>
-    </tr>
+    <!-- Color Logic -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="fw-semibold">Color Coding & Built-Up Logic</h4>
 
-    <tr class="short-covering">
-        <td>RELIANCE FUT</td>
-        <td>2960</td>
-        <td>+58</td>
-        <td>+2.0%</td>
-        <td>-42,000</td>
-        <td>-2.3%</td>
-        <td>6,10,000</td>
-        <td>Short Covering</td>
-        <td>Bullish Reversal</td>
-    </tr>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge bg-success">L – Long-Buildup</span>
+                <span class="badge bg-danger">S – Short Buildup</span>
+                <span class="badge bg-info text-dark">SC – Short Covering</span>
+                <span class="badge bg-warning text-dark">LU – Long Unwinding</span>
+            </div>
 
-    <tr class="long-unwinding">
-        <td>TCS FUT</td>
-        <td>3845</td>
-        <td>-82</td>
-        <td>-2.1%</td>
-        <td>-60,000</td>
-        <td>-3.8%</td>
-        <td>3,40,000</td>
-        <td>Long Unwinding</td>
-        <td>Bearish Reversal</td>
-    </tr>
+            <ul>
+                <li><strong>Price ↑ + OI ↑</strong> → Long Buildup (Fresh buying)</li>
+                <li><strong>Price ↓ + OI ↑</strong> → Short Buildup (Fresh selling)</li>
+                <li><strong>Price ↑ + OI ↓</strong> → Short Covering (Shorts exiting)</li>
+                <li><strong>Price ↓ + OI ↓</strong> → Long Unwinding (Bullish exit)</li>
+            </ul>
+        </div>
+    </div>
 
-    <tr class="neutral">
-        <td>INFY FUT</td>
-        <td>1625</td>
-        <td>+5</td>
-        <td>+0.3%</td>
-        <td>+4,000</td>
-        <td>+0.2%</td>
-        <td>2,10,000</td>
-        <td>Neutral</td>
-        <td>Sideways</td>
-    </tr>
-</table>
+    <!-- Reading Heatmap -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="fw-semibold">How to Read  Heatmap</h4>
 
-<div class="legend">
-    <div style="background:#2ecc71;">Long Buildup</div>
-    <div style="background:#e74c3c;">Short Buildup</div>
-    <div style="background:#a9dfbf;color:#000;">Short Covering</div>
-    <div style="background:#922b21;">Long Unwinding</div>
-    <div style="background:#f9e79f;color:#000;">Neutral</div>
+            <ul>
+                <li><strong>Rows:</strong> Individual stock futures</li>
+                <li><strong>Columns:</strong> Trading sessions</li>
+                <li><strong>Repeated colors:</strong> Strong directional conviction</li>
+                <li><strong>Color shifts:</strong> Momentum loss or reversal signal</li>
+            </ul>
+
+            <div class="alert alert-secondary mt-3">
+                <strong>Example:</strong><br>
+                Multiple <span class="text-danger fw-bold">Short Buildup</span>
+                followed by <span class="text-info fw-bold">Short Covering</span>
+                often leads to a <strong>short squeeze rally</strong>.
+            </div>
+        </div>
+    </div>
+
+    <!-- Trading Insights -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="fw-semibold">Practical Trading Insights</h4>
+
+            <ul>
+                <li>Consecutive <strong>Long Buildup</strong> → Strong uptrend</li>
+                <li><strong>Long → LU</strong> → Trend exhaustion</li>
+                <li><strong>Short → SC</strong> → Relief rally</li>
+                <li>Mixed colors → Sideways or consolidation phase</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="fw-semibold">Frequently Asked Questions (FAQ)</h4>
+
+            <div class="accordion mt-3" id="faqAccordion">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">
+                            Is Long Buildup always bullish?
+                        </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            Mostly yes, but confirm with <strong>volume, market trend,
+                            and broader index direction</strong>.
+                            Weak markets can still fail despite long buildup.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">
+                            Which built-up is best for intraday?
+                        </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>Short Covering</strong> and
+                            <strong>Long Buildup</strong> work best intraday
+                            when supported by strong volume.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">
+                            Can built-up data give false signals?
+                        </button>
+                    </h2>
+                    <div id="q3" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Yes. Events, news, rollover days, or low liquidity
+                            can distort OI behavior. Always use confirmation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">
+                            Best days setting for swing trading?
+                        </button>
+                    </h2>
+                    <div id="q4" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>5–10 days</strong> gives the best balance
+                            between noise reduction and trend clarity.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Best Practices -->
+    <div class="alert alert-info shadow-sm">
+        <strong>Best Practices:</strong><br>
+        ✔ Combine with Volume & OI % change<br>
+        ✔ Cross-check with Options COI<br>
+        ✔ Avoid decisions on 1-day data<br>
+        ✔ Align trades with index trend
+    </div>
+
 </div>
 
-<hr>
-
-<h2>Explanation of Columns</h2>
-
-<table>
-    <tr>
-        <th>Column</th>
-        <th>Explanation</th>
-        <th>Trading Insight</th>
-    </tr>
-
-    <tr>
-        <td>Contract</td>
-        <td>Name of the futures contract</td>
-        <td>Identifies the trading instrument</td>
-    </tr>
-
-    <tr>
-        <td>LTP</td>
-        <td>Last Traded Price</td>
-        <td>Shows current market price</td>
-    </tr>
-
-    <tr>
-        <td>Price Change</td>
-        <td>Difference from previous close</td>
-        <td>Indicates bullish or bearish move</td>
-    </tr>
-
-    <tr>
-        <td>% Price Change</td>
-        <td>Percentage movement in price</td>
-        <td>Measures strength of price move</td>
-    </tr>
-
-    <tr>
-        <td>OI Change</td>
-        <td>Change in Open Interest</td>
-        <td>Shows position buildup or exit</td>
-    </tr>
-
-    <tr>
-        <td>OI %</td>
-        <td>Percentage change in Open Interest</td>
-        <td>Strength of participation</td>
-    </tr>
-
-    <tr>
-        <td>Volume</td>
-        <td>Total contracts traded</td>
-        <td>Confirms price & OI action</td>
-    </tr>
-
-    <tr>
-        <td>Built-Up</td>
-        <td>Derived from Price vs OI behavior</td>
-        <td>Identifies long/short activity</td>
-    </tr>
-
-    <tr>
-        <td>Signal</td>
-        <td>Final market interpretation</td>
-        <td>Helps trading decision</td>
-    </tr>
-</table>
-
-<div class="note">
-<strong>Key Logic:</strong><br>
-• Price ↑ + OI ↑ → <b>Long Buildup</b><br>
-• Price ↓ + OI ↑ → <b>Short Buildup</b><br>
-• Price ↑ + OI ↓ → <b>Short Covering</b><br>
-• Price ↓ + OI ↓ → <b>Long Unwinding</b>
-</div>
-<h3>What are filter options?</h3>
-<div class="note">
-<strong>Practical Tip:</strong><br>
-• Use <b>1–3 Days</b> for intraday & BTST setups<br>
-• Use <b>7–15 Days</b> for swing trades<br>
-• Use <b>30 Days</b> to spot positional accumulation or distribution<br>
-• Combine <b>Expiry + Symbol Reading</b> for high-confidence trades
-</div>
-
-
-</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
