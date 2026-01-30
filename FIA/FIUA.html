@@ -60,6 +60,118 @@
             </p>
         </div>
     </div>
+    <!-- Price, Volume & OI Interpretation -->
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h4 class="section-title">Price, Volume & OI Interpretation</h4>
+
+        <!-- Table Snapshot Image -->
+        <div class="text-center mb-3">
+            <!-- put FIUA.png inside an images folder -->
+            <img src="images/FIUA.png" 
+                 class="img-fluid rounded shadow-sm" 
+                 alt="Intraday futures data table">
+        </div>
+
+        <p class="mb-3">
+            This table shows real-time intraday futures data at different time intervals.
+            It helps traders understand how price, volume and open interest are changing minute by minute.
+        </p>
+
+        <ul>
+            <li><strong>Time:</strong> Exact time of each data update.</li>
+            <li><strong>LTP (Last Traded Price):</strong> Current market price at that time.</li>
+            <li><strong>Δ LTP:</strong> How much price moved from the previous value.</li>
+            <li><strong>OI (Open Interest):</strong> Shows whether new positions are being added or removed.</li>
+            <li><strong>Volume:</strong> Number of contracts traded in that period.</li>
+            <li>
+                <strong>Built Up:</strong>
+                L = Long Build-up (bullish),
+                S = Short Build-up (bearish),
+                SC = Short Covering (temporary upside)
+            </li>
+        </ul>
+
+        <p>
+            When price and OI both increase, it means new buyers are entering (bullish).
+            When price falls but OI increases, it means new sellers are entering (bearish).
+        </p>
+
+        <hr>
+
+        <h5 class="section-title">Intraday Price Movement Chart</h5>
+
+        <!-- Chart Image -->
+        <div class="text-center mb-3">
+            <!-- put the second screenshot as chart.png in images folder -->
+            <img src="C:\Users\hp\Desktop\write-up-project\FIA\IMAGES\FIUA2.png" 
+                 class="img-fluid rounded shadow-sm" 
+                 alt="Price change vs price chart">
+        </div>
+
+        <p>
+            This chart visually shows how price moved throughout the day.
+        </p>
+        <ul>
+            <li><strong>Horizontal axis (bottom):</strong> Time of the day.</li>
+            <li><strong>Right vertical axis:</strong> Actual futures price.</li>
+            <li><strong>Orange line:</strong> Price change movement over time.</li>
+        </ul>
+
+        <p>
+            If the line is going up continuously, it indicates strong buying pressure.
+            If it is going down, it shows selling pressure.
+            Sharp jumps or drops usually happen when volume and OI increase suddenly,
+            which often signals smart money activity.
+        </p>
+
+        <p class="mb-0">
+            By combining the table data and this chart, traders can quickly see
+            both the numeric changes and the visual trend of the market in real time.
+        </p>
+    </div>
+</div>
+
+     <!-- Price, Volume & OI Interpretation -->
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h4 class="section-title">Price, Volume & OI Interpretation</h4>
+
+        <!-- Example Intraday Data Snapshot -->
+        <div class="text-center mb-3">
+            <img src="C:\Users\hp\Desktop\write-up-project\FIA\IMAGES\FIUA.png" 
+                 class="img-fluid rounded shadow-sm" 
+                 alt="Intraday futures data example">
+        </div>
+
+        <p class="mb-3">
+            The chart also shows real-time intraday futures data with columns for
+            <strong>Time, Last Traded Price (LTP), change in LTP, Open Interest (OI), Volume,</strong>
+            and the derived <strong>Built-up</strong> signal.
+        </p>
+
+        <ul>
+            <li><strong>LTP:</strong> Current traded price at that specific time.</li>
+            <li><strong>Δ LTP (Day):</strong> Net price and percentage change from previous data.</li>
+            <li><strong>OI:</strong> Increase or decrease in open positions (new positions vs closing).</li>
+            <li><strong>Volume:</strong> Number of contracts traded in that interval.</li>
+            <li>
+                <strong>Built Up Signal:</strong>
+                <span class="badge bg-success">L</span> = Long Build-up,
+                <span class="badge bg-danger">S</span> = Short Build-up,
+                <span class="badge bg-secondary">SC</span> = Short Covering
+            </li>
+        </ul>
+
+        <p>
+            By comparing how price, OI, and volume change together at each timestamp,
+            traders can quickly detect whether fresh bullish or bearish positions are being added,
+            or if existing positions are getting unwound.
+        </p>
+
+       
+    </div>
+</div>
 
     <!-- Key Components -->
     <div class="card shadow-sm mb-4">
@@ -177,6 +289,86 @@
             </ul>
         </div>
     </div>
+    <!-- Market Sentiment: Bullish vs Bearish vs Neutral -->
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h4 class="section-title">Market Sentiment Explained</h4>
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Market Type</th>
+                        <th>Who is in Control?</th>
+                        <th>Data Behaviour</th>
+                        <th>Meaning for Traders</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="badge bg-success fs-6">Bullish</span>
+                        </td>
+                        <td>Buyers</td>
+                        <td>
+                            Price ↑ <br>
+                            OI ↑ <br>
+                            Volume ↑ <br>
+                            Price above VWAP
+                        </td>
+                        <td>
+                            New long positions are being added.<br>
+                            Expect upward trend continuation.<br>
+                            Prefer buying on dips.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="badge bg-danger fs-6">Bearish</span>
+                        </td>
+                        <td>Sellers</td>
+                        <td>
+                            Price ↓ <br>
+                            OI ↑ <br>
+                            Volume ↑ <br>
+                            Price below VWAP
+                        </td>
+                        <td>
+                            New short positions are being added.<br>
+                            Expect downward trend continuation.<br>
+                            Prefer selling on rise.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class="badge bg-secondary fs-6">Neutral</span>
+                        </td>
+                        <td>No clear control</td>
+                        <td>
+                            Price sideways around VWAP <br>
+                            OI ↓ or very small change <br>
+                            Low/average volume
+                        </td>
+                        <td>
+                            Positions are being closed, not newly created.<br>
+                            Market is range-bound.<br>
+                            Better to wait for clear breakout.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="mt-3 mb-0">
+            In simple terms: <strong>Bullish = buy strength</strong>,
+            <strong>Bearish = sell strength</strong>,
+            and <strong>Neutral = wait and watch</strong> until either buyers or sellers take clear control.
+        </p>
+    </div>
+</div>
+
 
     <!-- Why It Is Important -->
     <div class="card shadow-sm mb-4">
@@ -225,7 +417,7 @@
 
         <hr>
 
-        <h4 class="section-title">Volume</h4>
+        <h5 class="section-title">Volume</h5>
         <p>
             Volume shows the total number of contracts traded during a specific period. It measures
             <strong>market participation and conviction</strong> behind a price move.
@@ -238,7 +430,7 @@
 
         <hr>
 
-        <h4 class="section-title">Open Interest</h4>
+        <h5 class="section-title">Open Interest</h5>
         <p>
             Open Interest (OI) represents the total number of outstanding futures contracts that are currently open.
             Unlike volume, OI helps identify whether <strong>new positions are being created or existing ones are being closed</strong>.
@@ -252,7 +444,7 @@
 
         <hr>
 
-        <h4 class="section-title">VWAP (Volume Weighted Average Price)</h4>
+        <h5 class="section-title">VWAP (Volume Weighted Average Price)</h5>
         <p>
             VWAP is the average price of a futures contract weighted by volume throughout the trading session.
             It acts as a <strong>dynamic intraday benchmark</strong> used by institutional traders.
